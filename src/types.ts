@@ -1,4 +1,7 @@
-type ColorType = "Black" | "White";
+enum ColorEnum {
+	"Black" = 0,
+	"White" = 1,
+}
 
 enum FileEnum {
 	"a" = 1,
@@ -11,4 +14,4 @@ enum FileEnum {
 	"h" = 8,
 }
 
-export { ColorType, FileEnum };
+export { ColorEnum, FileEnum };

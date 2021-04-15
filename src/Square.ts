@@ -1,10 +1,10 @@
-import { ColorType, FileEnum } from "./types";
+import { ColorEnum, FileEnum } from "./types";
 import Piece from "./Piece";
 
 export default class Square {
 	private _rank: number;
 	private _file: FileEnum;
-	private _color: ColorType;
+	private _color: ColorEnum;
 	private _piece: Piece | null;
 
 	/**
@@ -19,7 +19,8 @@ export default class Square {
 		this._piece = null;
 
 		// If sum of rank and file is even. then its a black square
-		this._color = (file + rank) % 2 === 0 ? "Black" : "White";
+		this._color =
+			(file + rank) % 2 === 0 ? ColorEnum.Black : ColorEnum.White;
 	}
 
 	get rank(): number {
@@ -30,7 +31,7 @@ export default class Square {
 		return this._file;
 	}
 
-	get Color(): ColorType {
+	get Color(): ColorEnum {
 		return this._color;
 	}
 
