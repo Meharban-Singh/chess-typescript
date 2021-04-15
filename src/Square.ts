@@ -1,11 +1,13 @@
 import { ColorEnum, FileEnum } from "./types";
 import Piece from "./Piece";
+import Board from "./Board";
 
 export default class Square {
 	private _rank: number;
 	private _file: FileEnum;
 	private _color: ColorEnum;
 	private _piece: Piece | null;
+	private _board: Board = Board.getInstance();
 
 	/**
 	 * Inits a new Square
@@ -37,6 +39,10 @@ export default class Square {
 
 	get piece(): Piece | null {
 		return this._piece;
+	}
+
+	get board(): Board {
+		return this._board;
 	}
 
 	set piece(piece: Piece | null) {
