@@ -4,7 +4,7 @@ export default class Board {
 	// Singleton instance
 	private static instance: Board = new Board();
 
-	private squares: Square[] = new Array<Square>();
+	private _squares: Square[] = new Array<Square>();
 
 	// Should not be able to init a new instance
 	private Board() {}
@@ -16,6 +16,13 @@ export default class Board {
 	 */
 	public static getInstance(): Board {
 		return this.instance;
+	}
+
+	/**
+	 * Returns the squares of the board
+	 */
+	get squares() {
+		return this._squares;
 	}
 
 	/**
