@@ -2,7 +2,7 @@ import Board from "./Board";
 import Square from "./Square";
 import { ColorEnum } from "./types";
 
-export default abstract class Piece {
+abstract class Piece {
 	private _color: ColorEnum;
 	private _square: Square;
 	private _captured: boolean;
@@ -73,3 +73,5 @@ export default abstract class Piece {
 		);
 	}
 }
+
+export { Piece };

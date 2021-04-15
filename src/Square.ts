@@ -1,5 +1,5 @@
 import { ColorEnum, FileEnum } from "./types";
-import Piece from "./Piece";
+import { Piece } from "./Pieces";
 import Board from "./Board";
 
 export default class Square {
